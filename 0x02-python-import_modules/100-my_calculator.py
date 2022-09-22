@@ -20,4 +20,4 @@ if __name__ == "__main__":
     if op == "*":
         print("{:d} * {:d} = {:d}".foramt(num1, num2, mul(num1, num2)))
     if op == "/":
-        print("{:f} / {:f} = {:f}".format(num1, num2, div(num1, num2)))
+        print("{:d} / {:d} = {:d}".format(num1, num2, div(num1, num2)))
