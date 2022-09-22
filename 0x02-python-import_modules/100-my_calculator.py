@@ -10,7 +10,6 @@ if __name__ == "__main__":
     if argv[2] not in sign:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-        print(sum_arg)
     num1 = int(argv[1])
     num2 = int(argv[3])
     op = argv[2]
