@@ -8,7 +8,7 @@ if __name__ == "__main__":
         exit(1)
     sign = ['+', '-', '*', '/']
     if argv[2] not in sign:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     num1 = int(argv[1])
     num2 = int(argv[3])
