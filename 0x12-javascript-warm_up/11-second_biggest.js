@@ -2,8 +2,8 @@
 
 const args = process.argv;
 const num = process.argv[2];
-const arg_3 = process.argv[3]
-if (!num || !arg_3) {
+const arg3 = process.argv[3];
+if (!num || !arg3) {
   console.log('0');
 }
 for (let i = 1; i < args.length; i++) {
