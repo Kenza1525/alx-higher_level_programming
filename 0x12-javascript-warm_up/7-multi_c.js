@@ -6,6 +6,6 @@ if (args) {
   for (let i = 0; i < args; i++) {
   console.log('C is fun');
   }
-} else if (!args || args < 0) {
+} else {
   console.log('Missing number of occurrences');
 }
