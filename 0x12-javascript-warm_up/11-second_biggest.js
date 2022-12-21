@@ -6,7 +6,7 @@ const arg3 = process.argv[3];
 if (!num || !arg3) {
   console.log('0');
 }
-for (let i = 1; i < args.length; i++) {
+for (let i = 2; i < args.length; i++) {
   if (args[i] > num) {
     console.log(num);
   }
