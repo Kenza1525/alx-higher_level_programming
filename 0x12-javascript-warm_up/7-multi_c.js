@@ -5,7 +5,7 @@ const line = 'C is fun';
 if (args) {
   for (let i = 0; i < args; i++) {
   console.log(`${line}`);
-}
+  }
 } else if (!args || args < 0) {
   console.log('Missing number of occurrences');
 }
