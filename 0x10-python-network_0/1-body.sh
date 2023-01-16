@@ -1,3 +1,3 @@
 #!/bin/bash
 # Displays only body
-curl -sI "$1"
+curl -sL "$1"
