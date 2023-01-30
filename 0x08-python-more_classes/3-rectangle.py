@@ -55,5 +55,6 @@ class Rectangle:
         for i in range(self.height):
             for j in range(self.width):
                 shape += "#"
-            shape += "\n"
+            if i != self.height - 1:
+                shape += "\n"
         return shape
