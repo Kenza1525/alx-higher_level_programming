@@ -10,8 +10,8 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """ Initialize the instance attribute """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -50,9 +50,11 @@ class SinglyLinkedList:
         string = ""
         temp = self.__head
 
-        while temp:
-            string += str(temp.data) + '\n'
+        while temp is not None:
+            string += str(temp.data)
             temp = temp.next_node
+            if temp is not None:
+                string += "\n"
         return string
 
     def sorted_insert(self, value):
@@ -61,9 +63,10 @@ class SinglyLinkedList:
         if self.__head is None:
             self.__head = new_node
             return
-        if self.__head.data >= new_node.data:
+        if self.__head.data > new_node.data:
             new_node.next_node = self.__head
             self.__head = new_node
+            return
 
         temp = self.__head
         while temp.next_node is not None and temp.next_node.data < new_node.data:
