@@ -8,4 +8,4 @@ def save_to_json_file(my_obj, filename):
     """ opening a file in write mode and use the dumps()
     to convert it into a string """
     with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(my_obj, f)
+        return json.dump(my_obj, f)
