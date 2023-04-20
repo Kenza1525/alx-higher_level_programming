@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" prints the State object with the name passed as argumen """
+""" lists all State objects that contain the letter a """
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -16,12 +16,11 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = sessionmaker(bind=engine)()
-    state_name = argv[4]
-    state_with_a = session.query(State)\
-                          .filter_by(name=state_name).first()
 
-    if state_with_a is None:
-        print('Not found')
-    else:
-        print(f'{state_with_a.id}')
+    state_with_a = session.query(State)\
+                          .filter(State.name.like('%a%'))\
+                          .order_by(State.id).all()
+
+    for row in state_with_a:
+        print(f'{row.id}: {row.name}')
     session.close()
