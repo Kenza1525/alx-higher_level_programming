@@ -20,5 +20,8 @@ if __name__ == '__main__':
     state_with_a = session.query(State)\
                           .filter_by(name=argv[4]).first()
 
-    print(f'{state_with_a.id}')
+    if state_with_a:
+        print(f'{state_with_a.id}')
+    else:
+        print('No Results')
     session.close()
