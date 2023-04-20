@@ -21,8 +21,8 @@ if __name__ == '__main__':
     state_with_a = session.query(State)\
                           .filter_by(name=state_name).first()
 
-    if state_with_a:
-        print(f'{state_with_a.id}')
+    if state_with_a is None:
+        print('Not found')
     else:
-        print('No Results')
+        print(f'{state_with_a.id}')
     session.close()
