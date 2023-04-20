@@ -16,7 +16,6 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = sessionmaker(bind=engine)()
-    
     state_name = argv[4]
     state_with_a = session.query(State)\
                           .filter_by(name=state_name).first()
