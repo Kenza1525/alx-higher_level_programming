@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" lists all State objects that contain the letter a """
+"""  adds the State object “Louisiana” to the database hbtn_0e_6_usa """
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -17,10 +17,9 @@ if __name__ == '__main__':
 
     session = sessionmaker(bind=engine)()
 
-    state_with_a = session.query(State)\
-                          .filter(State.name.like('%a%'))\
-                          .order_by(State.id).all()
+    new_state = State(name='Louisiana')
+    session.add(new_state)
+    session.commit()
 
-    for row in state_with_a:
-        print(f'{row.id}: {row.name}')
+    print(f'{new_state.id}')
     session.close()
