@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     try:
         if value_found:
-            print(f"{[value_found['id']]} {value_found['name']}")
+            print(f"{[value_found.get('id')]} {value_found.get('name')}")
         else:
             print("No result")
 
