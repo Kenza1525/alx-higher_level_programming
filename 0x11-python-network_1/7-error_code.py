@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" takes in a URL, sends a request to the URL and 
+""" takes in a URL, sends a request to the URL and
 displays the body of the response """
 
 import requests
@@ -11,4 +11,5 @@ if __name__ == "__main__":
 
     if response.status_code >= 400:
         print(f"Error code: {response.status_code}")
-    print(response.text)
+    else:
+        print(response.text)
