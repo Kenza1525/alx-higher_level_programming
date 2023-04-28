@@ -14,9 +14,9 @@ if __name__ == "__main__":
     letter_search = {"q": q}
     url = "http://0.0.0.0:5000/search_user"
     response = requests.post(url, letter_search)
-    value_found = response.json()
 
     try:
+        value_found = response.json()
         if value_found:
             print(f"{[value_found.get('id')]} {value_found.get('name')}")
         else:
