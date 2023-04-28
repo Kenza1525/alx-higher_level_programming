@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" takes in a letter and sends a POST request to 
+""" takes in a letter and sends a POST request to
 http://0.0.0.0:5000/search_user with the letter as a parameter """
 
 import requests
@@ -7,7 +7,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) == 2:
-        q = arv[1]
+        q = argv[1]
     else:
         q = ""
 
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     response = requests.post(url, letter_search)
     value_found = response.json()
-    
+
     try:
         if value_found:
             print(f"{[value_found['id']]} {value_found['name']}")
