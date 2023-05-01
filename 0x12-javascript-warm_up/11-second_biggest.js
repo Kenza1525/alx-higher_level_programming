@@ -11,6 +11,6 @@ if (argvSize < 4) {
     const a = parseInt(arrayArg[i]);
     arrayNum.push(a);
   }
-  arrayNum.sort();
-  console.log(arrayNum[arrayArg.length - 2]);
+  arrayNum.sort((a, b) => a - b);
+  console.log(arrayNum[arrayNum.length - 2]);
 }
