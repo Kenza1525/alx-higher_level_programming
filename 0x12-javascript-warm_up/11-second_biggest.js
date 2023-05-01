@@ -5,7 +5,7 @@ const arrayArg = process.argv.slice(2);
 const arrayNum = [];
 
 if (argvSize < 4) {
-  console.log('1');
+  console.log('0');
 } else {
   for (let i = 0; i < arrayArg.length; i++) {
     const a = parseInt(arrayArg[i]);
